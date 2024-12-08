@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Compatibility Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Partner 1's Information</h1>
+        <form id="partner1-form">
+            <label for="partner1-first-name">First Name:</label>
+            <input type="text" id="partner1-first-name" required>
+            
+            <label for="partner1-last-name">Last Name:</label>
+            <input type="text" id="partner1-last-name">
+            
+            <label for="partner1-gender">Gender:</label>
+            <select id="partner1-gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            
+            <label for="partner1-age">Age:</label>
+            <input type="number" id="partner1-age" required>
+            
+            <button type="submit">Submit Partner 1 Info</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
