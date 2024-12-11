@@ -1,35 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relationship Compatibility Quiz</title>
+    <title>Relationship Compatibility Checker</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="form-container">
-        <h1>Partner 1's Information</h1>
-        <form id="partner1-form">
-            <label for="partner1-first-name">First Name:</label>
-            <input type="text" id="partner1-first-name" required>
-            
+<body id="main-body">
+    <div class="container">
+        <h1>Relationship Compatibility Checker</h1>
+        <p>Answer the questions honestly to evaluate your compatibility with your partner. Please ensure you enter your full name (no nicknames) and provide a valid email address.</p>
+
+        <form id="partner1-form" class="form">
+            <h2>Partner 1 Information</h2>
+            <label for="partner1-first-name">First Name (Required):</label>
+            <input type="text" id="partner1-first-name" placeholder="Enter first name" required>
+
             <label for="partner1-last-name">Last Name:</label>
-            <input type="text" id="partner1-last-name">
-            
+            <input type="text" id="partner1-last-name" placeholder="Enter last name">
+
             <label for="partner1-gender">Gender:</label>
             <select id="partner1-gender" required>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
             </select>
-            
-            <label for="partner1-age">Age:</label>
-            <input type="number" id="partner1-age" required>
-            
-            <button type="submit">Submit Partner 1 Info</button>
-        </form>
-    </div>
 
+            <label for="partner1-age">Age:</label>
+            <input type="number" id="partner1-age" placeholder="Enter age" required>
+
+            <label for="partner1-second-marriage">Is this your second marriage?</label>
+            <select id="partner1-second-marriage">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <button type="button" id="start-quiz">Start Quiz</button>
+        </form>
+
+        <div id="quiz-container" class="hidden">
+            <h2 id="quiz-header">Questions for <span id="partner-name"></span></h2>
+            <div id="questions"></div>
+            <button type="button" id="submit-quiz">Submit Quiz</button>
+        </div>
+
+        <div id="results-container" class="hidden">
+            <h2>Compatibility Results</h2>
+            <p id="results-summary"></p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
